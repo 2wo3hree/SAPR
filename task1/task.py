@@ -1,7 +1,7 @@
 import json
 import numpy as np
 
-def parser(graph):
+def main(graph):
     data = json.loads(graph)
     nodes = list(data["nodes"].keys())
 
@@ -14,18 +14,21 @@ def parser(graph):
 
     return matrix
 
-graph = """
 
-{
-    "nodes":{
-        "1": ["2"],
-        "2": ["3", "4"],
-        "3": ["5"],
-        "4": [],
-        "5": []
+if __name__ == "__main__":
+
+    graph = """
+
+    {
+        "nodes":{
+            "1": ["2"],
+            "2": ["3", "4"],
+            "3": ["5"],
+            "4": [],
+            "5": []
+        }
     }
-}
-"""
+    """
 
-matrix = parser(graph)
-print(matrix)
+    matrix = main(graph)
+    print(matrix)

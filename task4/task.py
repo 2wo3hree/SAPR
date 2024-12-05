@@ -27,7 +27,7 @@ def compute_entropy(distribution):
 
     return entropy_value
 
-def entropy_analysis():
+def main():
     sum_freq, product_freq, combined_freq = generate_frequencies()
 
     combined_entropy = compute_entropy(combined_freq)
@@ -45,6 +45,7 @@ def entropy_analysis():
         round(mutual_info, 2)
     ]
 
+
 if __name__ == "__main__":
-    results = entropy_analysis()
+    results = main()
     print(results)
